@@ -7,18 +7,18 @@ public class Credit {
 	//properties 
 	private int duration_in_months;
 	private Date start_date;
-	private float interest_rate;
+	private double interest_rate;
 	private double loan;
 	private Amortization_table amortization;
 		
 	//constructor
-	public Credit(int duration_in_months, Date start_date, float interest_rate,
+	public Credit(int duration_in_months, Date start_date, double interest_rate, double insurance_rate, 
 			double loan) {
 		this.setDuration_in_months(duration_in_months);
 		this.setStart_date(start_date);
 		this.setInterest_rate(interest_rate);
 		this.setLoan(loan);
-		this.setAmortization(new Amortization_table(loan, interest_rate, duration_in_months));
+		this.setAmortization(new Amortization_table(loan, interest_rate,insurance_rate, duration_in_months));
 		
 		
 	}
@@ -37,7 +37,6 @@ public class Credit {
 		return 1 - (getTotal_interests_paid()/(this.getTotal_interests_paid()+this.loan));
 	}
 	
-	
 	//set&get
 
 	public int getDuration_in_months() {
@@ -53,11 +52,11 @@ public class Credit {
 	private void setStart_date(Date start_date) {
 		this.start_date = start_date;
 	}
-	public float getInterest_rate() {
+	public double getInterest_rate() {
 		return interest_rate;
 	}
-	private void setInterest_rate(float interest_rate) {
-		this.interest_rate = interest_rate;
+	private void setInterest_rate(double interest_rate2) {
+		this.interest_rate = interest_rate2;
 	}
 	public double getLoan() {
 		return loan;
