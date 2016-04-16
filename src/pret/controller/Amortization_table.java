@@ -1,6 +1,6 @@
 package pret.controller;
 
-public class amortization_table {
+public class Amortization_table {
 	private double beginning_balance[];
 	private double interest_rate;
 	private double interest_monthly[];
@@ -9,7 +9,7 @@ public class amortization_table {
 	
 	
 	
-	public amortization_table(double loan, double interest, int duration_in_months) {
+	public Amortization_table(double loan, double interest, int duration_in_months) {
 		//super();
 		this.interest_rate=interest/100;
 		//calculate the principal_monthly

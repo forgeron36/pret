@@ -2,23 +2,23 @@ package pret.controller;
 
 import java.util.Date;
 
-public class pret {
+public class Credit {
 	
 	//properties 
 	private int duration_in_months;
 	private Date start_date;
 	private float interest_rate;
 	private double loan;
-	private amortization_table amortization;
+	private Amortization_table amortization;
 		
 	//constructor
-	public pret(int duration_in_months, Date start_date, float interest_rate,
+	public Credit(int duration_in_months, Date start_date, float interest_rate,
 			double loan) {
 		this.setDuration_in_months(duration_in_months);
 		this.setStart_date(start_date);
 		this.setInterest_rate(interest_rate);
 		this.setLoan(loan);
-		this.setAmortization(new amortization_table(loan, interest_rate, duration_in_months));
+		this.setAmortization(new Amortization_table(loan, interest_rate, duration_in_months));
 		
 		
 	}
@@ -65,10 +65,10 @@ public class pret {
 	private void setLoan(double loan) {
 		this.loan = loan;
 	}
-	public amortization_table getAmortization() {
+	public Amortization_table getAmortization() {
 		return amortization;
 	}
-	private void setAmortization(amortization_table amortization) {
+	private void setAmortization(Amortization_table amortization) {
 		this.amortization = amortization;
 	}
 	
